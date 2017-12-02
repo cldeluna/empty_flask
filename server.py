@@ -33,8 +33,7 @@ def get_news(publication="bbc"):
   feed = feedparser.parse(RSS_FEEDS[publication])
   first_article = feed['entries'][0]
 
-  return render_template("home.html",title=first_article.get("title"),published=first_article.get("published"),
-                         summary=first_article.get("summary"))
+  return render_template("home.html", article=first_article)
 
 if __name__ == "__main__":
     host = os.getenv('IP','0.0.0.0')
