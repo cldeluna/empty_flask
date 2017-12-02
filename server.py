@@ -12,6 +12,7 @@ __date__ = "12/2/2017"
 __copyright__ = "Copyright (c) 2016 Claudia"
 __license__ = "Python"
 
+import os
 import argparse
 import feedparser
 from flask import Flask, render_template
