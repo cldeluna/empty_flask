@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <title>Headlines</title>
 </head>
-    <body>
-        <h1>Headlines</h1>
+<body>
+    <h1>Headlines</h1>
+    {% for article in articles %}
         <b>{{article.title}}</b><br />
         <i>{{article.published}}</i><br />
         <p>{{article.summary}}</p>
-    </body>
+        <hr />
+    {% endfor %}
+</body>
 </html>
